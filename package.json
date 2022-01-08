@@ -1,6 +1,6 @@
 {
   "name": "@wytxer/style-utils",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "常用样式库，支持 less 和 scss，包含 flex 布局、margin、padding 等。",
   "scripts": {
     "dev": "vue-cli-service serve",

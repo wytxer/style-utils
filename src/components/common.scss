@@ -1,0 +1,218 @@
+// flex
+.FB {
+  display: flex;
+}
+
+// flex-direction
+.FBFD-C {
+  flex-direction: column;
+}
+
+// align-items
+.FBAI-FS {
+  align-items: flex-start;
+}
+.FBAI-C {
+  align-items: center;
+}
+.FBAI-FE {
+  align-items: flex-end;
+}
+.FBAI-S {
+  align-items: stretch;
+}
+.FBAI-B {
+  align-items: baseline;
+}
+
+// justify-content
+.FBJC-FS {
+  justify-content: flex-start;
+}
+.FBJC-C {
+  justify-content: center;
+}
+.FBJC-FE {
+  justify-content: flex-end;
+}
+.FBJC-SB {
+  justify-content: space-between;
+}
+.FBJC-SA {
+  justify-content: space-around;
+}
+
+// align-content
+.FBAC-FS {
+  align-content: flex-start;
+}
+.FBAC-C {
+  align-content: center;
+}
+.FBAC-FE {
+  align-content: flex-end;
+}
+.FBAC-S {
+  align-content: stretch;
+}
+.FBAC-SB {
+  align-content: space-between;
+}
+.FBAC-SA {
+  align-content: space-around;
+}
+
+// align-self
+.FBAS-FS {
+  align-self: flex-start;
+}
+.FBAS-C {
+  align-self: center;
+}
+.FBAS-FE {
+  align-self: flex-end;
+}
+.FBAS-B {
+  align-self: baseline;
+}
+.FBAS-S {
+  align-self: stretch;
+}
+
+// flex-wrap
+.FBFW-W {
+  flex-wrap: wrap;
+}
+.FBFW-N {
+  flex-wrap: nowrap;
+}
+
+// flex
+@for $i from 1 to 10 {
+  .FB#{$i} {
+    flex: $i;
+  }
+}
+
+$unit: rpx;
+$spacings: 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 64;
+// 先生成上下左右一样的间距
+@each $i in $spacings {
+  .M#{$i} {
+    margin: $i + $unit;
+  }
+  .P#{$i} {
+    padding: $i + $unit;
+  }
+}
+// 生成常用的间距
+@each $i in $spacings {
+  .MT#{$i} {
+    margin-top: $i + $unit;
+  }
+  .MR#{$i} {
+    margin-right: $i + $unit;
+  }
+  .MB#{$i} {
+    margin-bottom: $i + $unit;
+  }
+  .ML#{$i} {
+    margin-left: $i + $unit;
+  }
+  .PT#{$i} {
+    padding-top: $i + $unit;
+  }
+  .PR#{$i} {
+    padding-right: $i + $unit;
+  }
+  .PB#{$i} {
+    padding-bottom: $i + $unit;
+  }
+  .PL#{$i} {
+    padding-left: $i + $unit;
+  }
+}
+
+// 生成常用的负间距
+$negativeSpacings: 12 16 20 24;
+@each $i in $negativeSpacings {
+  .MT-#{$i} {
+    margin-top: -$i + $unit;
+  }
+  .MB-#{$i} {
+    margin-bottom: -$i + $unit;
+  }
+  .ML-#{$i} {
+    margin-left: -$i + $unit;
+  }
+  .MR-#{$i} {
+    margin-right: -$i + $unit;
+  }
+}
+
+// 单行文本超出后显示省略号
+.OMIT {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 元素超出后隐藏
+.HD {
+  overflow: hidden;
+}
+// 显示
+.SHOW {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease-in;
+}
+// 隐藏
+.HIDE {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-out;
+}
+
+// 对齐方式
+.TAL {
+  text-align: left;
+}
+.TAC {
+  text-align: center;
+}
+.TAR {
+  text-align: right;
+}
+
+// 鼠标变成手型
+.HAND {
+  cursor: pointer;
+}
+
+// 通用的颜色
+.C666 {
+  color: #666666;
+}
+.C999 {
+  color: #999999;
+}
+
+// 宽度
+$widths: 10 25 50 100;
+@each $i in $widths {
+  .W#{$i} {
+    width: percentage($i / 100);
+  }
+}
+
+// 等宽字体
+.FEW {
+  font-family: Consolas, Monaco, monospace;
+}
+.F18 {
+  font-size: 18px;
+}
+.F20 {
+  font-size: 20px;
+}

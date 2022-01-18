@@ -38,7 +38,11 @@
   "license": "MIT",
   "homepage": "https://github.com/wytxer/style-utils/#readme",
   "keywords": [
-    "Style Utils"
+    "style",
+    "style utils",
+    "less utils",
+    "css style",
+    "flex"
   ],
   "author": {
     "name": "wytxer",
